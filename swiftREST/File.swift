@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct File: Codable {
+    enum CodingKeys: String, CodingKey {
+        case url = "raw_url"
+        case content
+    }
+    let url: URL?
+    let content: String?
+}
